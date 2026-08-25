@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -33,9 +33,11 @@
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   },
+  
   "description": "This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.21.",
   "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC"
+  
 }
