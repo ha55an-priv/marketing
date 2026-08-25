@@ -7,7 +7,7 @@ import { ServiceItem } from '../../../../core/models/project.model';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section id="services" class="py-section-gap bg-surface-container-low border-y border-outline-variant">
+    <section id="services" class="py-section-gap bg-white/55 border-y border-zinc-200/70">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="flex flex-col gap-4 mb-16">
           <span class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-fixed-variant uppercase">
@@ -19,7 +19,7 @@ import { ServiceItem } from '../../../../core/models/project.model';
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div *ngFor="let service of services" class="bg-surface-container-lowest p-8 rounded-lg border border-outline-variant flex flex-col justify-between">
+          <div *ngFor="let service of services" class="bg-white/85 p-8 rounded-2xl border border-zinc-200 hover:border-zinc-400 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
             <div>
               <span class="material-symbols-outlined text-primary text-4xl mb-6 block">{{ service.icon }}</span>
               <h3 class="font-headline-md text-headline-md font-semibold text-primary  mb-4">{{ service.title }}</h3>

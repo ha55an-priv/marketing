@@ -48,3 +48,13 @@
     linear-gradient(to bottom, #e0e3e5 1px, transparent 1px);
   background-size: 40px 40px;
 }
+
+.bg-tech-surface {
+  background-color: #f7f9fb;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(206, 227, 237, 0.45), transparent 28rem),
+    radial-gradient(circle at 88% 24%, rgba(190, 197, 229, 0.28), transparent 30rem),
+    linear-gradient(rgba(198, 198, 206, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(198, 198, 206, 0.18) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+}

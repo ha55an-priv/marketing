@@ -7,7 +7,7 @@ import { Project } from '../../../../core/models/project.model';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section id="portfolio" class="py-section-gap bg-surface">
+    <section id="portfolio" class="py-section-gap bg-transparent">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="flex flex-col gap-4 mb-16">
           <span class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-fixed-variant uppercase">
@@ -19,25 +19,27 @@ import { Project } from '../../../../core/models/project.model';
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div *ngFor="let project of projects" class="bg-surface-container-lowest border border-outline-variant p-8 rounded-lg hover:border-outline transition-all duration-300 flex flex-col justify-between">
+          <div *ngFor="let project of projects" class="bg-white/85 border border-zinc-200 p-8 rounded-2xl hover:border-zinc-400 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
             <div>
-              <img
-                [src]="project.imageUrl"
-                [alt]="project.title"
-                class="w-full h-48 object-cover rounded mb-6 border border-outline-variant"
-              />
+              <div class="overflow-hidden rounded-xl mb-6 border border-zinc-200">
+                <img
+                  [src]="project.imageUrl"
+                  [alt]="project.title"
+                  class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
               <span class="font-label-caps text-xs text-outline uppercase tracking-wider block mb-2">{{ project.category }}</span>
               <h3 class="font-headline-md text-headline-md font-semibold text-primary  mb-3">{{ project.title }}</h3>
               <p class="font-body-md text-body-md text-on-surface-variant mb-6">{{ project.description }}</p>
               
-              <div class="bg-surface-container p-4 rounded mb-6 border border-outline-variant">
+              <div class="bg-zinc-50 p-4 rounded-xl mb-6 border border-zinc-200/70">
                 <span class="font-label-caps text-xs text-outline block mb-1">KEY IMPACT</span>
                 <span class="font-headline-md text-sm font-bold text-primary ">{{ project.metrics }}</span>
               </div>
             </div>
 
             <div class="flex flex-wrap gap-2 pt-4 border-t border-outline-variant">
-              <span *ngFor="let tag of project.tags" class="font-label-caps text-xs bg-surface-container-high px-2.5 py-1 rounded text-on-surface-variant">
+              <span *ngFor="let tag of project.tags" class="font-label-caps text-xs bg-zinc-100 text-zinc-700 border border-zinc-200/60 px-2.5 py-1 rounded-full">
                 {{ tag }}
               </span>
             </div>
