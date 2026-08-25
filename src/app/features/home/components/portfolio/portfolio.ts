@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../../../core/models/project.model';
+import { LanguageService } from '../../../../core/services/language.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,15 +12,15 @@ import { Project } from '../../../../core/models/project.model';
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="flex flex-col gap-4 mb-16">
           <span class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-fixed-variant uppercase">
-             Selected Architecture
+             {{ language.isSpanish() ? 'Arquitecturas seleccionadas' : 'Selected architecture' }}
           </span>
           <h2 class="font-headline-lg text-headline-lg font-bold text-primary ">
-            Featured Custom Engineering
+            {{ language.isSpanish() ? 'Proyectos destacados a medida' : 'Featured custom engineering' }}
           </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div *ngFor="let project of projects" class="bg-white/85 border border-zinc-200 p-8 rounded-2xl hover:border-zinc-400 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div *ngFor="let project of projects()" class="bg-white/85 border border-zinc-200 p-8 rounded-2xl hover:border-zinc-400 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
             <div>
               <div class="overflow-hidden rounded-xl mb-6 border border-zinc-200">
                 <img
@@ -33,7 +34,7 @@ import { Project } from '../../../../core/models/project.model';
               <p class="font-body-md text-body-md text-on-surface-variant mb-6">{{ project.description }}</p>
               
               <div class="bg-zinc-50 p-4 rounded-xl mb-6 border border-zinc-200/70">
-                <span class="font-label-caps text-xs text-outline block mb-1">KEY IMPACT</span>
+                <span class="font-label-caps text-xs text-outline block mb-1">{{ language.isSpanish() ? 'IMPACTO CLAVE' : 'KEY IMPACT' }}</span>
                 <span class="font-headline-md text-sm font-bold text-primary ">{{ project.metrics }}</span>
               </div>
             </div>
@@ -50,33 +51,50 @@ import { Project } from '../../../../core/models/project.model';
   `
 })
 export class PortfolioComponent {
-  projects: Project[] = [
+  readonly language = inject(LanguageService);
+  readonly projects = computed<Project[]>(() => this.language.isSpanish() ? [
     {
       id: '1',
-      title: 'Enterprise ERP & Logistics',
-      category: 'Data Architecture',
-      description: 'Real-time telemetry and supply chain routing engine handling high-throughput operations.',
-      tags: ['Angular', 'Go', 'Microservices'],
-      metrics: '+40% operational efficiency',
+      title: 'ERP empresarial y logística',
+      category: 'Arquitectura de datos',
+      description: 'Motor de telemetría en tiempo real y gestión de rutas de suministro para operaciones de alto volumen.',
+      tags: ['Angular', 'Go', 'Microservicios'],
+      metrics: '+40% de eficiencia operativa',
       imageUrl: '/assets/unnamed1.jpg'
     },
     {
       id: '2',
-      title: 'Bespoke Fintech Platform',
-      category: 'Web Application',
-      description: 'Bank-grade transaction orchestration system built with sub-millisecond response guarantees.',
+      title: 'Plataforma financiera a medida',
+      category: 'Aplicación web',
+      description: 'Sistema de orquestación de transacciones de nivel bancario con respuestas garantizadas en menos de un milisegundo.',
       tags: ['TypeScript', 'Node.js', 'PostgreSQL'],
-      metrics: 'Zero-downtime migration',
+      metrics: 'Migración sin interrupciones',
       imageUrl: '/assets/unnamed2.jpg'
     },
     {
       id: '3',
-      title: 'Automated Workflow Engine',
-      category: 'Cloud Architecture',
-      description: 'Event-driven automation platform for complex enterprise document pipelines.',
+      title: 'Motor de flujos automatizados',
+      category: 'Arquitectura en la nube',
+      description: 'Plataforma de automatización basada en eventos para flujos complejos de documentos empresariales.',
       tags: ['Python', 'Kafka', 'Docker'],
-      metrics: '10M+ events processed/day',
+      metrics: 'Más de 10 millones de eventos procesados al día',
       imageUrl: '/assets/unnamed3.jpg'
     }
-  ];
+  ] : [
+    {
+      id: '1', title: 'Enterprise ERP and logistics', category: 'Data architecture',
+      description: 'Real-time telemetry and supply chain routing engine handling high-throughput operations.',
+      tags: ['Angular', 'Go', 'Microservices'], metrics: '+40% operational efficiency', imageUrl: '/assets/unnamed1.jpg'
+    },
+    {
+      id: '2', title: 'Bespoke fintech platform', category: 'Web application',
+      description: 'Bank-grade transaction orchestration system built with sub-millisecond response guarantees.',
+      tags: ['TypeScript', 'Node.js', 'PostgreSQL'], metrics: 'Zero-downtime migration', imageUrl: '/assets/unnamed2.jpg'
+    },
+    {
+      id: '3', title: 'Automated workflow engine', category: 'Cloud architecture',
+      description: 'Event-driven automation platform for complex enterprise document pipelines.',
+      tags: ['Python', 'Kafka', 'Docker'], metrics: '10M+ events processed/day', imageUrl: '/assets/unnamed3.jpg'
+    }
+  ]);
 }

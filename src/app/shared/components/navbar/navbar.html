@@ -1,21 +1,29 @@
 <nav class="bg-white/75 backdrop-blur-md font-body-md text-body-md fixed top-0 w-full z-50 border-b border-zinc-200/60 shadow-sm">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
         <a class="flex items-center gap-3 cursor-pointer active:scale-95" href="#">
-          <img alt="BYTEK Logo" class="h-8 w-8 object-contain" src="/assets/Logo.svg"/>
+          <img alt="Logotipo de BYTEK" class="h-8 w-8 object-contain" src="/assets/Logo.svg"/>
           <span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">BYTEK</span>
         </a>
         <div class="hidden md:flex items-center gap-8">
-          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#services">Services</a>
-          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#portfolio">Portfolio</a>
-          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#process">Process</a>
-          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#about">About</a>
-          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#contact">Contact</a>
+          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#services">{{ language.isSpanish() ? 'Servicios' : 'Services' }}</a>
+          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#portfolio">{{ language.isSpanish() ? 'Portafolio' : 'Portfolio' }}</a>
+          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#process">{{ language.isSpanish() ? 'Proceso' : 'Process' }}</a>
+          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#about">{{ language.isSpanish() ? 'Nosotros' : 'About' }}</a>
+          <a class="text-secondary hover:text-primary transition-colors duration-200 cursor-pointer active:scale-95" href="#contact">{{ language.isSpanish() ? 'Contacto' : 'Contact' }}</a>
         </div>
         <div class="hidden md:flex">
-          <a class="bg-primary text-on-primary px-6 py-3 rounded-lg hover:bg-opacity-90 hover:shadow-md hover:scale-[1.02] transition-all duration-200 font-label-caps uppercase tracking-widest text-label-caps cursor-pointer active:scale-95" href="#contact">Start a Project</a>
+          <a class="bg-primary text-on-primary px-6 py-3 rounded-lg hover:bg-opacity-90 hover:shadow-md hover:scale-[1.02] transition-all duration-200 font-label-caps uppercase tracking-widest text-label-caps cursor-pointer active:scale-95" href="#contact">{{ language.isSpanish() ? 'Iniciar un proyecto' : 'Start a project' }}</a>
+          <button type="button" class="border border-outline text-primary px-3 py-2 rounded-lg font-label-caps text-label-caps hover:bg-surface transition-colors" (click)="language.toggle()" [attr.aria-label]="language.isSpanish() ? 'Cambiar a inglés' : 'Switch to Spanish'">
+            {{ language.isSpanish() ? 'EN' : 'ES' }}
+          </button>
         </div>
-        <button class="md:hidden text-primary" aria-label="Open navigation menu">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
+        <div class="md:hidden flex items-center gap-3">
+          <button type="button" class="border border-outline text-primary px-3 py-2 rounded-lg font-label-caps text-label-caps hover:bg-surface transition-colors" (click)="language.toggle()" [attr.aria-label]="language.isSpanish() ? 'Cambiar a inglés' : 'Switch to Spanish'">
+            {{ language.isSpanish() ? 'EN' : 'ES' }}
+          </button>
+          <button type="button" class="text-primary" [attr.aria-label]="language.isSpanish() ? 'Abrir menú de navegación' : 'Open navigation menu'">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
       </div>
     </nav>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../../../core/services/language.service';
 
 @Component({
   selector: 'app-proof',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './proof.html',
   styles: ``,
 })
-export class Proof {}
+export class Proof {
+  readonly language = inject(LanguageService);
+}
