@@ -18,6 +18,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('We Build Bespoke Software');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Creamos software a medida');
   });
 });

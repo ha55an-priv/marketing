@@ -3,19 +3,19 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <p class="font-headline-lg text-headline-lg font-bold text-primary">100%</p>
-            <p class="font-label-caps text-label-caps text-outline uppercase mt-1">Custom Codebase</p>
+            <p class="font-label-caps text-label-caps text-outline uppercase mt-1">{{ language.isSpanish() ? 'Código personalizado' : 'Custom codebase' }}</p>
           </div>
           <div>
             <p class="font-headline-lg text-headline-lg font-bold text-primary">99.8%</p>
-            <p class="font-label-caps text-label-caps text-outline uppercase mt-1">On-Time Delivery</p>
+            <p class="font-label-caps text-label-caps text-outline uppercase mt-1">{{ language.isSpanish() ? 'Entrega puntual' : 'On-time delivery' }}</p>
           </div>
           <div>
             <p class="font-headline-lg text-headline-lg font-bold text-primary">Zero</p>
-            <p class="font-label-caps text-label-caps text-outline uppercase mt-1">Bloat / Templates</p>
+            <p class="font-label-caps text-label-caps text-outline uppercase mt-1">{{ language.isSpanish() ? 'Sin exceso ni plantillas' : 'Zero bloat or templates' }}</p>
           </div>
           <div>
             <p class="font-headline-lg text-headline-lg font-bold text-primary">&lt; 24h</p>
-            <p class="font-label-caps text-label-caps text-outline uppercase mt-1">Support Response</p>
+            <p class="font-label-caps text-label-caps text-outline uppercase mt-1">{{ language.isSpanish() ? 'Respuesta de soporte' : 'Support response' }}</p>
           </div>
         </div>
       </div>

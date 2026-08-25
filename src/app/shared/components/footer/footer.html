@@ -2,21 +2,21 @@
   <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-2 gap-base font-body-md text-body-md">
       <div class="flex flex-col gap-6">
         <div class="flex items-center gap-3">
-          <img alt="BYTEK Logo" class="h-8 w-8 object-contain brightness-0 invert" src="/assets/Logo.svg"/>
-          <span class="font-headline-md text-headline-md font-bold">BYTEK Solutions</span>
+          <img alt="Logotipo de BYTEK" class="h-8 w-8 object-contain brightness-0 invert" src="/assets/Logo.svg"/>
+          <span class="font-headline-md text-headline-md font-bold">{{ language.isSpanish() ? 'BYTEK Soluciones' : 'BYTEK Solutions' }}</span>
         </div>
         <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200 block" href="mailto:bytekbolivia@gmail.com ">bytekbolivia@gmail.com</a>
       </div>
       <div class="flex flex-col md:items-end justify-between gap-12">
         <div class="flex flex-wrap gap-6 md:justify-end">
-          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#services">Services</a>
-          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#portfolio">Portfolio</a>
-          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#process">Process</a>
-          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#about">About</a>
-          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#contact">Contact</a>
-          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#">Privacy Policy</a>
+          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#services">{{ language.isSpanish() ? 'Servicios' : 'Services' }}</a>
+          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#portfolio">{{ language.isSpanish() ? 'Portafolio' : 'Portfolio' }}</a>
+          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#process">{{ language.isSpanish() ? 'Proceso' : 'Process' }}</a>
+          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#about">{{ language.isSpanish() ? 'Nosotros' : 'About' }}</a>
+          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#contact">{{ language.isSpanish() ? 'Contacto' : 'Contact' }}</a>
+          <a class="text-[#dbe1ff] hover:text-white transition-colors duration-200" href="#">{{ language.isSpanish() ? 'Política de privacidad' : 'Privacy Policy' }}</a>
         </div>
-        <p class="text-[#dbe1ff] text-sm">© 2024 BYTEK Solutions. All rights reserved.</p>
+        <p class="text-[#dbe1ff] text-sm">{{ language.isSpanish() ? '© 2024 BYTEK Soluciones. Todos los derechos reservados.' : '© 2024 BYTEK Solutions. All rights reserved.' }}</p>
       </div>
   </div>
 </footer>

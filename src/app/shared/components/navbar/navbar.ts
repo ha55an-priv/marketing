@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../../core/services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.html',
   styles: ``,
 })
-export class Navbar {}
+export class Navbar {
+  readonly language = inject(LanguageService);
+}
