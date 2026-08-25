@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "aethelyn-frontend": {
+    "bytek-frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "aethelyn-frontend:build:production"
+              "buildTarget": "bytek-frontend:build:production"
             },
             "development": {
-              "buildTarget": "aethelyn-frontend:build:development"
+              "buildTarget": "bytek-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"

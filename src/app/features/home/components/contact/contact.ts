@@ -22,8 +22,8 @@ import { Component } from '@angular/core';
 
             <div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant">
               <span class="font-label-caps text-xs text-outline uppercase block mb-2">Direct Contact</span>
-              <a href="mailto:aethelyn.solutions@gmail.com" class="font-headline-md text-headline-md font-bold text-primary  hover:underline">
-                aethelyn.solutions@gmail.com
+              <a href="mailto:bytekbolivia@gmail.com " class="font-headline-md text-headline-md font-bold text-primary  hover:underline">
+                bytekbolivia@gmail.com
               </a>
             </div>
           </div>
