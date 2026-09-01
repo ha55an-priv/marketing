@@ -17,15 +17,23 @@ import { LanguageService } from '../../../../core/services/language.service';
                 {{ language.isSpanish() ? '¿Listo para crear un software adaptado exactamente a tus necesidades?' : 'Ready to build software tailored to your exact needs?' }}
               </h2>
               <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                {{ language.isSpanish() ? 'Agenda una consulta arquitectónica con nuestros responsables técnicos. Sin discursos comerciales, solo conversaciones de ingeniería.' : 'Schedule an architectural consultation with our technical leads. No sales fluff, just engineering discussions.' }}
+                {{ language.isSpanish() ? 'Agenda una consulta arquitectónica con nuestros responsables técnicos. Sin discursos comerciales, solo conversaciones de ingeniería con resultado claro.' : 'Schedule an architectural consultation with our technical leads. No sales fluff, just engineering conversations with clear outcomes.' }}
               </p>
             </div>
 
-            <div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant">
-              <span class="font-label-caps text-xs text-outline uppercase block mb-2">{{ language.isSpanish() ? 'Contacto directo' : 'Direct contact' }}</span>
-              <a href="mailto:bytekbolivia@gmail.com " class="font-headline-md text-headline-md font-bold text-primary  hover:underline">
-                bytekbolivia@gmail.com
-              </a>
+            <div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant space-y-4">
+              <div>
+                <span class="font-label-caps text-xs text-outline uppercase block mb-2">{{ language.isSpanish() ? 'Contacto directo' : 'Direct contact' }}</span>
+                <a href="mailto:bytekbolivia@gmail.com" class="font-headline-md text-headline-md font-bold text-primary hover:underline block">
+                  bytekbolivia@gmail.com
+                </a>
+              </div>
+              <div>
+                <span class="font-label-caps text-xs text-outline uppercase block mb-2">WhatsApp</span>
+                <a href="https://wa.me/?text=Hola%20BYTEK%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20sin%20compromiso." class="inline-flex items-center gap-2 rounded-full border border-emerald-500 bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-100 transition-colors">
+                  Escribenos por WhatsApp para atención inmediata
+                </a>
+              </div>
             </div>
           </div>
 
@@ -45,9 +53,11 @@ import { LanguageService } from '../../../../core/services/language.service';
               <div>
                 <label class="font-label-caps text-xs text-on-surface-variant uppercase block mb-2">{{ language.isSpanish() ? 'Rango de presupuesto estimado' : 'Estimated budget range' }}</label>
                 <select class="w-full bg-surface border border-outline-variant p-3 rounded text-primary focus:border-primary focus:outline-none font-body-md">
-                  <option>$10k - $25k</option>
-                  <option>$25k - $50k</option>
-                  <option>$50k+</option>
+                  <option value="" selected disabled>{{ language.isSpanish() ? 'Selecciona un rango' : 'Select a range' }}</option>
+                  <option>&lt; $150 USD (Solución inicial/Landing)</option>
+                  <option>$150 - $400 USD (Sistema a medida estándar)</option>
+                  <option>$400 - $800 USD (Plataforma empresarial avanzada)</option>
+                  <option>&gt; $800 USD (Arquitectura a gran escala)</option>
                 </select>
               </div>
 
@@ -57,7 +67,7 @@ import { LanguageService } from '../../../../core/services/language.service';
               </div>
 
               <button type="submit" class="w-full bg-primary text-on-primary py-4 rounded font-label-caps uppercase text-label-caps tracking-wider hover:bg-opacity-90 transition-all active:scale-98">
-                {{ language.isSpanish() ? 'Enviar resumen de arquitectura' : 'Submit architecture brief' }}
+                Solicitar Cotización sin Compromiso
               </button>
             </form>
           </div>
