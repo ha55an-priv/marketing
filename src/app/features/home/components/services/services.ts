@@ -15,7 +15,7 @@ import { LanguageService } from '../../../../core/services/language.service';
              {{ language.isSpanish() ? 'Capacidades principales' : 'Core capabilities' }}
           </span>
           <h2 class="font-headline-lg text-headline-lg font-bold text-primary ">
-            {{ language.isSpanish() ? 'Ingeniería de software de precisión' : 'Precision software engineering' }}
+            {{ language.isSpanish() ? 'Soluciones que eliminan fricción operativa' : 'Solutions that remove operational friction' }}
           </h2>
         </div>
 
@@ -44,40 +44,40 @@ export class ServicesComponent {
   readonly services = computed<ServiceItem[]>(() => this.language.isSpanish() ? [
     {
       icon: 'terminal',
-      title: 'Aplicaciones web y móviles a medida',
-      description: 'Interfaces a medida y backends robustos diseñados específicamente para tu ámbito operativo.',
-      capabilities: ['Aplicaciones de una sola página', 'Aplicaciones web progresivas', 'Backends móviles nativos']
+      title: 'Desarrollo Web y Apps a Medida',
+      description: 'Sistemas enfocados en automatización, alta velocidad y eliminación de errores manuales.',
+      capabilities: ['Procesos automatizados', 'Dashboards operativos', 'Experiencia rápida y consistente']
     },
     {
       icon: 'dns',
-      title: 'Arquitectura empresarial y API',
-      description: 'Estructuras de datos escalables, microservicios limpios y capas de API seguras diseñadas para resistir.',
-      capabilities: ['API RESTful y GraphQL', 'Optimización de bases de datos', 'Diseño de sistemas en la nube']
+      title: 'Arquitectura e Integraciones',
+      description: 'Conexión fluida con pasarelas de pago, APIs y bases de datos seguras.',
+      capabilities: ['APIs y webhooks', 'Integración con pagos', 'Datos seguros y confiables']
     },
     {
       icon: 'published_with_changes',
-      title: 'Modernización de software heredado',
-      description: 'Migración de sistemas monolíticos a plataformas web modernas y de alto rendimiento sin pérdida de datos.',
-      capabilities: ['Refactorización del código', 'Migración a la nube', 'Auditoría de rendimiento']
+      title: 'Modernización de Sistemas',
+      description: 'Migración ágil de hojas de cálculo o software lento a plataformas modernas en la nube.',
+      capabilities: ['Migración sin interrupciones', 'Optimización de desempeño', 'Escalabilidad preparada para crecer']
     }
   ] : [
     {
       icon: 'terminal',
-      title: 'Custom web and mobile apps',
-      description: 'Tailor-made frontends and robust backends designed specifically around your operational domain.',
-      capabilities: ['Single-page applications', 'Progressive web apps', 'Native mobile backends']
+      title: 'Custom Web and App Development',
+      description: 'Systems focused on automation, speed, and elimination of manual errors.',
+      capabilities: ['Automated workflows', 'Operational dashboards', 'Fast and consistent UX']
     },
     {
       icon: 'dns',
-      title: 'Enterprise architecture and APIs',
-      description: 'Scalable data structures, clean microservices, and secure API layers built for resilience.',
-      capabilities: ['RESTful and GraphQL APIs', 'Database optimization', 'Cloud systems design']
+      title: 'Architecture and Integrations',
+      description: 'Seamless connection with payment gateways, APIs, and secure databases.',
+      capabilities: ['APIs and webhooks', 'Payment integrations', 'Secure, reliable data flows']
     },
     {
       icon: 'published_with_changes',
-      title: 'Legacy software modernization',
-      description: 'Migrating monolithic systems into modern, high-performance web platforms without data loss.',
-      capabilities: ['Codebase refactoring', 'Cloud migration', 'Performance auditing']
+      title: 'System Modernization',
+      description: 'Agile migration from spreadsheets or slow software to modern cloud-based platforms.',
+      capabilities: ['Zero-downtime migration', 'Performance optimization', 'Scalable growth-ready systems']
     }
   ]);
 }

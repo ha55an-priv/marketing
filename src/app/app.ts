@@ -6,6 +6,7 @@ import { Proof } from './features/home/components/proof/proof';
 import { PortfolioComponent } from './features/home/components/portfolio/portfolio';
 import { ServicesComponent } from './features/home/components/services/services';
 import { ProcessComponent } from './features/home/components/process/process';
+import { GuaranteeComponent } from './features/home/components/guarantee/guarantee';
 import { ContactComponent } from './features/home/components/contact/contact';
 
 @Component({
@@ -17,6 +18,7 @@ import { ContactComponent } from './features/home/components/contact/contact';
     ServicesComponent,
     PortfolioComponent,
     ProcessComponent,
+    GuaranteeComponent,
     ContactComponent,
     Footer
   ],
@@ -28,6 +30,7 @@ import { ContactComponent } from './features/home/components/contact/contact';
       <app-services></app-services>
       <app-portfolio></app-portfolio>
       <app-process></app-process>
+      <app-guarantee></app-guarantee>
       <app-contact></app-contact>
     </main>
     <app-footer></app-footer>
